@@ -33,4 +33,14 @@ public class Question implements Serializable {
     public String getDetails() {
         return details;
     }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id=" + id +
+                ", question='" + question + '\'' +
+                ", correct=" + correct +
+                ", details='" + details + '\'' +
+                '}';
+    }
 }

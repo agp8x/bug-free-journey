@@ -5,6 +5,7 @@ import android.text.TextUtils;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -20,7 +21,12 @@ public class Util {
     public static List<Question> loadQuestions(String path, Context context) {
         List<Question> questions = new LinkedList<>();
         try {
-            InputStream is = context.getAssets().open(path);
+            InputStream is;
+            if (path.startsWith("/")) {
+                is = new FileInputStream(path);
+            } else {
+                is = context.getAssets().open(path);
+            }
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
             String input;
             boolean init = true;

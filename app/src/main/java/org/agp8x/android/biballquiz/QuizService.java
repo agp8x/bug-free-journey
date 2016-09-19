@@ -47,4 +47,7 @@ public class QuizService extends Service {
         }
         return questions.get(i);
     }
+    public void load(String path){
+        questions.addAll(Util.loadQuestions(path,this));
+    }
 }
