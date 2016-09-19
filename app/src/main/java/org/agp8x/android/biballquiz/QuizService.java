@@ -17,6 +17,7 @@ import java.util.List;
 public class QuizService extends Service {
     private final IBinder binder = new LocalBinder();
     private final List<Question> questions = new ArrayList<>();
+    int i = -1;
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -35,5 +36,13 @@ public class QuizService extends Service {
         QuizService getService() {
             return QuizService.this;
         }
+    }
+
+    public Question getNext() {
+        i += 1;
+        if (i >= questions.size()) {
+            i = 0;
+        }
+        return questions.get(i);
     }
 }

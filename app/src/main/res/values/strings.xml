@@ -4,4 +4,6 @@
     <string name="start">Start!</string>
     <string name="button_true">true</string>
     <string name="button_false">false</string>
+    <string name="button_next">next</string>
+    <string name="explanation">explanation</string>
 </resources>
