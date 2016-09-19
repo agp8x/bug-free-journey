@@ -11,7 +11,7 @@ public class Question implements Serializable {
     private final boolean correct;
     private final String details;
 
-    public Question(int id, String question, boolean correct, String details) {
+    public Question(int id, boolean correct, String question, String details) {
         this.id = id;
         this.question = question;
         this.correct = correct;

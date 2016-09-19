@@ -7,6 +7,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 
 import org.agp8x.android.biballquiz.data.Question;
+import org.agp8x.android.biballquiz.data.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +22,9 @@ public class QuizService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        questions.add(new Question(1, "false", false, "asdf"));
-        questions.add(new Question(2, "true", true, "asdf"));
+        //questions.add(new Question(1, false, "false", "asdf"));
+       // questions.add(new Question(2, true, "true", "asdf"));
+        questions.addAll(Util.loadQuestions("data.csv", this));
         return Service.START_NOT_STICKY;
     }
 
