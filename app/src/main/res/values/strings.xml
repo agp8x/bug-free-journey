@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BiBallQuiz</string>
+    <string name="action_settings">Settings</string>
+    <string name="start">Start!</string>
+    <string name="button_true">true</string>
+    <string name="button_false">false</string>
+</resources>
