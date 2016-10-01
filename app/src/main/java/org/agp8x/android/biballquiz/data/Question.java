@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by clemensk on 19.09.16.
  */
-public class Question implements Serializable {
+public class Question implements Serializable, DBObject {
     private final int id;
     private final String question;
     private final boolean correct;

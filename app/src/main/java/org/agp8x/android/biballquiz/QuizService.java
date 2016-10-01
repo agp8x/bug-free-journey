@@ -7,7 +7,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 
 import org.agp8x.android.biballquiz.data.Question;
-import org.agp8x.android.biballquiz.data.Util;
+import org.agp8x.android.biballquiz.data.DataUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class QuizService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         //questions.add(new Question(1, false, "false", "asdf"));
        // questions.add(new Question(2, true, "true", "asdf"));
-        questions.addAll(Util.loadQuestions("data.csv", this));
+        questions.addAll(DataUtil.loadQuestions("data.csv", this));
         return Service.START_NOT_STICKY;
     }
 
@@ -35,7 +35,7 @@ public class QuizService extends Service {
     }
 
     public class LocalBinder extends Binder {
-        QuizService getService() {
+        public QuizService getService() {
             return QuizService.this;
         }
     }
@@ -48,6 +48,6 @@ public class QuizService extends Service {
         return questions.get(i);
     }
     public void load(String path){
-        questions.addAll(Util.loadQuestions(path,this));
+        questions.addAll(DataUtil.loadQuestions(path,this));
     }
 }

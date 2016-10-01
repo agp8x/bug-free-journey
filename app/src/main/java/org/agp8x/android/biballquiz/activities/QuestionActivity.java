@@ -1,4 +1,4 @@
-package org.agp8x.android.biballquiz;
+package org.agp8x.android.biballquiz.activities;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.agp8x.android.biballquiz.QuizService;
+import org.agp8x.android.biballquiz.R;
 import org.agp8x.android.biballquiz.data.Question;
 
 public class QuestionActivity extends AppCompatActivity {

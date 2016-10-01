@@ -1,4 +1,4 @@
-package org.agp8x.android.biballquiz;
+package org.agp8x.android.biballquiz.activities;
 
 import android.Manifest;
 import android.content.ComponentName;
@@ -15,6 +15,9 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+
+import org.agp8x.android.biballquiz.QuizService;
+import org.agp8x.android.biballquiz.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +50,7 @@ public class FilesActivity extends AppCompatActivity {
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
         if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                Log.e("asdf", "GIMME PERMISSION!");
+                Log.e(Util.TAG, "GIMME PERMISSION!");
                 //TODO: rationale
             } else {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, requestCode);
@@ -73,7 +76,7 @@ public class FilesActivity extends AppCompatActivity {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 handle();
             } else {
-                Log.d("asdf", "FU!");
+                Log.d(Util.TAG, "FU!");
             }
             return;
         }

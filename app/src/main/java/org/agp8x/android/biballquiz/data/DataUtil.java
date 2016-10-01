@@ -4,12 +4,10 @@ import android.content.Context;
 import android.text.TextUtils;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -17,7 +15,7 @@ import java.util.List;
 /**
  * Created by clemensk on 19.09.16.
  */
-public class Util {
+public class DataUtil {
     public static List<Question> loadQuestions(String path, Context context) {
         List<Question> questions = new LinkedList<>();
         try {

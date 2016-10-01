@@ -1,4 +1,4 @@
-package org.agp8x.android.biballquiz;
+package org.agp8x.android.biballquiz.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import org.agp8x.android.biballquiz.QuizService;
+import org.agp8x.android.biballquiz.R;
 
 public class MainActivity extends AppCompatActivity {
 
